@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <form [formGroup]="registerForm" (ngSubmit) = "onSubmit()">
+        <div class="avatar">
+            <img src="../../assets/avatar.png" alt="" srcset="" class="avatar-img">
+        </div>
+        <mat-error>{{error}}</mat-error>
+        <mat-form-field appearance="legacy">
+            <mat-label>Enter Name</mat-label>
+            <input matInput placeholder="John Doe" formControlName = "name">
+            <mat-error></mat-error>
+        </mat-form-field><br />
+        <mat-form-field appearance="legacy">
+            <mat-label>Enter Email</mat-label>
+            <input matInput placeholder="johndoe@example.com" formControlName = "email">
+            <mat-error></mat-error>
+        </mat-form-field><br />
+        <mat-form-field appearance="legacy">
+            <mat-label>Enter Password</mat-label>
+            <input matInput placeholder="johndoe@1234" type="password" formControlName = "password">
+            <mat-error></mat-error>
+        </mat-form-field><br />
+        <mat-form-field appearance="legacy">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput placeholder="johndoe@1234" type="password" formControlName = "cpassword" >
+            <mat-error>}</mat-error>
+        </mat-form-field>
+        <mat-error>{{msg}}</mat-error>
+        <br />
+        <button mat-raised-button color="primary" type="submit" [disabled]="!(registerForm.valid && !msg)">Register</button>
+    </form>
+</div>
+

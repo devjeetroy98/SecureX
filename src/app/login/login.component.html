@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <form [formGroup]="loginForm" (ngSubmit) = "onSubmit()">
+        <div class="avatar">
+            <img src="../../assets/avatar.png" alt="" srcset="" class="avatar-img">
+        </div>
+        <mat-form-field appearance="legacy">
+            <mat-label>Enter Email</mat-label>
+            <input matInput placeholder="johndoe@example.com" formControlName = "email">
+            <mat-error></mat-error>
+        </mat-form-field><br />
+        <mat-form-field appearance="legacy">
+            <mat-label>Enter Password</mat-label>
+            <input matInput placeholder="johndoe@1234" type="password" formControlName = "password">
+            <mat-error></mat-error>
+        </mat-form-field><br />
+        <button mat-raised-button color="primary">Sign In</button>
+    </form>
+</div>

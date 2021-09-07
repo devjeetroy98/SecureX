@@ -1,0 +1,17 @@
+<p>
+    <mat-toolbar color="primary">
+      <span class="brand">SecureX</span>
+      <span class="example-spacer"></span>
+        <button mat-button [matMenuTriggerFor]="animal" class="menu-class"><mat-icon aria-hidden="false" aria-label="Example home icon"> manage_accounts </mat-icon>  User Profile </button>
+        <mat-menu #animal="matMenu">
+  
+            <button mat-menu-item [class.hidden-link]='loggedIn'><a href="" routerLink="/login"><mat-icon aria-hidden="false" aria-label="icon">login</mat-icon> Sign In </a></button>
+            <button mat-menu-item [class.hidden-link]='loggedIn'><a href="" routerLink="/register"><mat-icon aria-hidden="false" aria-label="icon">how_to_reg</mat-icon> Register </a></button>
+            <button mat-menu-item [class.hidden-link]='!loggedIn'><mat-icon aria-hidden="false" aria-label="icon">edit</mat-icon> Edit Profile </button>
+            <button mat-menu-item [class.hidden-link]='!loggedIn'><a href="" routerLink="/reset-password"><mat-icon aria-hidden="false" aria-label="icon">password</mat-icon> Reset Password</a></button>
+            <button mat-menu-item (click)="logout()" [class.hidden-link]='!loggedIn'><a href="" ><mat-icon aria-hidden="false" aria-label="icon">logout</mat-icon> Sign Out </a></button>
+        
+        
+          </mat-menu>  
+    </mat-toolbar>
+  </p>

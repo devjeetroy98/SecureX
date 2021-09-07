@@ -1,0 +1,15 @@
+.menu-class{
+    position: absolute;
+    right: 200px;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+.hidden-link{
+    display: none!important;
+}
+.brand{
+    margin-left: 50px!important;
+}

@@ -1,0 +1,11 @@
+.container-fluid{
+    margin-top: 50px;
+    text-align: center;
+}
+h1{
+    font-size: 28px;
+}
+p{
+    color: gray;
+    font-size: 18px;
+}
